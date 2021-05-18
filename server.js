@@ -1,8 +1,12 @@
 const express = require("express");
 const dotEnv = require("dotenv");
+const connnectDB = require("./configuration/database");
 
 //configuration
 dotEnv.config({ path: "./configuration/config.env" });
+
+//connnecting to mongoDB
+connnectDB();
 
 const app = express();
 //sample get
