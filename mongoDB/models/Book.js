@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const BookSchema = new mongoose.Schema({
     ibnNumber: {
         type: String,
-        required: true,
+        /* required: true, */
     },
     title: {
         type: String,
@@ -11,27 +11,31 @@ const BookSchema = new mongoose.Schema({
     },
     author: {
         type: String,
-        required: true,
+        /*  required: true, */
     },
     language: {
         type: String,
-        required: true,
+        /*  required: true, */
+    },
+    desc: {
+        type: String,
+        /*  required: true, */
     },
     img: {
         type: String,
-        required: true,
+        /*  required: true, */
     },
     linkToPurchase: {
-        type: Date,
-        required: true,
+        type: String,
+        /* required: true, */
     },
     year: {
-        type: Date,
-        required: true,
+        type: String,
+        /*   required: true, */
     },
     genre: {
-        type: Date,
-        required: true,
+        type: String,
+        /* required: true, */
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,

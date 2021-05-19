@@ -1,0 +1,47 @@
+<form action="/books" method="POST">
+  <div class="form-group">
+    <label for="IBN Number" name="ibnNumber">IBN Number</label>
+    <input
+      type="text"
+      class="form-control"
+      id="ibnNumber"
+      placeholder="12553627223"
+    />
+  </div>
+  <div class="form-group">
+    <label for="Title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" />
+  </div>
+  <div class="form-group">
+    <label for="Author">Author</label>
+    <input type="text" class="form-control" id="author" name="author" />
+  </div>
+  <div class="form-group">
+    <label for="language">language</label>
+    <input type="text" class="form-control" id="language" name="language" />
+  </div>
+  <div class="form-group">
+    <label for="Image">Image</label>
+    <input type="file" class="form-control-file" id="image" />
+  </div>
+  <div class="form-group">
+    <label for="buy">Buy</label>
+    <input type="text" class="form-control" id="buy" name="linkToPurchase" />
+  </div>
+  <div class="form-group">
+    <label for="genre">genre</label>
+    <input type="text" class="form-control" id="genre" name="genre" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="desc"
+    ></textarea>
+  </div>
+  <input type="submit" class="btn" value="save" />
+  <a href="/home" class="btn btn-danger">Cancel</a>
+</form>

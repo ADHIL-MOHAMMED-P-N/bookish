@@ -22,5 +22,6 @@ router.get("/home", verifyAuth, async(req, res) => {
         res.render("error");
     }
 });
+//dashboard
 
 module.exports = router;

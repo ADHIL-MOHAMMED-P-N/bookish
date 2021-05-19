@@ -20,6 +20,10 @@ connnectDB();
 //init app
 const app = express();
 
+//body parser
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 //Static Folder
 app.use(express.static(path.join(__dirname, "static")));
 
@@ -46,6 +50,7 @@ app.use(passport.session());
 //Using the routes(routes at bottom)
 app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth_route"));
+app.use("/books", require("./routes/books_route"));
 
 const port = process.env.PORT || 4000;
 app.listen(
