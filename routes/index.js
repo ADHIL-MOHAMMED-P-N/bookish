@@ -11,7 +11,9 @@ router.get("/", verifyGuest, (req, res) => {
 
 //Home route
 router.get("/home", verifyAuth, (req, res) => {
-    res.render("home");
+    res.render("home", {
+        name: req.user.firstName,
+    });
 });
 
 module.exports = router;

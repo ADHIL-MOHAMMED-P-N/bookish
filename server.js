@@ -1,10 +1,12 @@
 const express = require("express");
 const dotEnv = require("dotenv");
+const mongoose = require("mongoose");
 const connnectDB = require("./configuration/database");
 const handlebars = require("express-handlebars");
 const path = require("path");
 const passport = require("passport");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 
 //configuration
 dotEnv.config({ path: "./configuration/config.env" });
@@ -31,6 +33,9 @@ app.use(
         secret: "keyboard cat",
         resave: false,
         saveUninitialized: false, //which means dont create a sessions until something is stores
+        store: MongoStore.create({
+            mongoUrl: process.env.MONGO_URL,
+        }),
     })
 );
 
