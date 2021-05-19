@@ -13,5 +13,8 @@ router.get(
         res.redirect("/home");
     }
 );
-
+router.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/");
+});
 module.exports = router;
