@@ -8,21 +8,20 @@ const fetch = require("node-fetch");
 router.get("/", verifyAuth, async(req, res) => {
     console.log("fetching api");
     res.redirect("/home");
-
-    const url = "https://www.googleapis.com/books/v1/volumes?q=arachar";
-    const options = {
-        method: "GET",
-    };
-    const response = await fetch(url, options)
-        .then((res) => res.json())
-        .catch((e) => {
-            console.error({
-                message: "Erroe occured",
-                error: e,
-            });
-        });
-    console.log("responce :", response);
-    res.json();
+    //fetching the google books api
+    /*    const url = "https://www.googleapis.com/books/v1/volumes?q=ovvijayan";
+      const options = {
+          method: "GET",
+      };
+      const response = await fetch(url, options)
+          .then((res) => res.json())
+          .then((data) => console.log(data.items))
+          .catch((e) => {
+              console.error({
+                  message: "Erroe occured",
+                  error: e,
+              });
+          }); */
 });
 
 module.exports = router;

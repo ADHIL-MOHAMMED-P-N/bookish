@@ -26,10 +26,12 @@ app.use(express.json());
 
 //Static Folder
 app.use(express.static(path.join(__dirname, "static")));
+/* app.use(express.static(path.join(__dirname, "static", "uploads"))); */
 
 //Handlebars
 app.engine("handlebars", handlebars({ defaultLayout: "index" }));
 app.set("view engine", "handlebars");
+/* app.use(express.static("views/images")); */ //img not loading
 
 //session middle ware ----!!always put above passport middleware
 app.use(
