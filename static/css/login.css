@@ -1,5 +1,78 @@
 /*Log in page*/
 
 h1 {
-    color: teal;
+    
+    color: white;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+
+body{
+    height: 100vh;
+    background: #2c2354!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card{
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+     width: 63%;
+
+  }
+  
+  .img-left{
+    width: 50%;
+    background: url(../image/background.jpg) center;
+    background-size: cover;
+    
+  }
+  .title{
+    margin-bottom: -5rem;
+    text-align: right;
+    margin-right: -24px;
+  }
+  
+  
+  .card-body{
+    padding: 1rem;
+    margin-top: 150px;
+  }
+  
+
+.btn-danger{
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background:red;
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    transition: 0.5s;
+    padding: 12px;
+    display: block;
+    width: 78%;
+}
+.button{
+    margin-left: 75px;
+    margin-top: 98px;
+}
+h3{
+    font-size: 0.75rem;
+    text-align: center;
+    opacity: 75%;
+   
+}
+.text1{
+    width: 200px;
+    margin-left: 92px;
+    margin-top: 5px;
 }
