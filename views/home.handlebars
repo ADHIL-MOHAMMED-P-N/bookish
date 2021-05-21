@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Bookish</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -23,32 +23,7 @@
         <li class="nav-item">
           <a class="nav-link" href="books/add">Add</a>
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link disabled"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-          >Disabled</a>
-        </li>
+
       </ul>
       <form class="d-flex" action="/search" method="GET">
         <input
@@ -68,17 +43,15 @@
           <option value="author">Author</option>
           <option value="genre">genre</option>
         </select>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-success" type="submit">Search</button>
       </form>
     </div>
   </div>
 </nav>
-<h6>Home</h6>
-<h2>Welcome {{name}}</h2>
 
 <!-- post -->
 
-<section class="container d-flex flex-column align-items-center">
+<section class="container d-flex flex-column align-items-center mt-5 pt-3">
   {{#each books}}
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
@@ -88,10 +61,12 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">{{title}}</h5>
+            <h4 class="card-title">{{title}}</h4>
+            <h6 class="card-title">{{author}}</h6>
+            <p class="card-text">{{language}},{{genre}}<p/>
             <p class="card-text">{{desc}}</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                ago</small></p>
+            
+            <a href={{linkToPurchase}} class="card-link">Purchase</a>
           </div>
         </div>
       </div>
