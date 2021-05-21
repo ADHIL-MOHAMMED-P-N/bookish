@@ -56,7 +56,18 @@
           type="search"
           placeholder="Search"
           aria-label="Search"
+          name="search"
         />
+        <select
+          class="form-select form-select-sm"
+          aria-label=".form-select-sm example"
+          name="category"
+        >
+          <option selected>Search in</option>
+          <option value="title">Title</option>
+          <option value="author">Author</option>
+          <option value="genre">genre</option>
+        </select>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
@@ -64,8 +75,10 @@
 </nav>
 <h6>Home</h6>
 <h2>Welcome {{name}}</h2>
+
 <!-- post -->
-<section class="container d-flex flex-column">
+
+<section class="container d-flex flex-column align-items-center">
   {{#each books}}
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">

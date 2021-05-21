@@ -2,26 +2,21 @@ const express = require("express");
 const router = express.Router();
 const { verifyAuth, verifyGuest } = require("../middleware/auth_middleware");
 const fetch = require("node-fetch");
-/* const Book = require("../mongoDB/models/Book"); */
+const Book = require("../mongoDB/models/Book");
 
-//Login route
 router.get("/", verifyAuth, async(req, res) => {
-    console.log("fetching api");
-    res.redirect("/home");
-    //fetching the google books api
-    /*    const url = "https://www.googleapis.com/books/v1/volumes?q=ovvijayan";
-      const options = {
-          method: "GET",
-      };
-      const response = await fetch(url, options)
-          .then((res) => res.json())
-          .then((data) => console.log(data.items))
-          .catch((e) => {
-              console.error({
-                  message: "Erroe occured",
-                  error: e,
-              });
-          }); */
+    try {
+        const category = req.query.category;
+        /* console.log(category); */
+        const books = await Book.find({
+            [category]: req.query.search, //"search" is the name of the input field
+        }).lean();
+        res.render("home", {
+            books: books,
+        });
+    } catch (error) {
+        res.render("error");
+    }
 });
 
 module.exports = router;
