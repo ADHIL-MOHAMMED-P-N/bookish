@@ -43,5 +43,17 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
         res.render("error");
     }
 });
+//show book
+router.get("/:id", verifyAuth, async(req, res) => {
+    try {
+        const book = await Book.findById(req.params.id).lean();
+        res.render("showbook", {
+            book: book,
+        });
+        console.log(req.params.id);
+    } catch (error) {
+        res.render("error");
+    }
+});
 
 module.exports = router;

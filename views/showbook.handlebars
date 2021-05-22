@@ -48,32 +48,27 @@
     </div>
   </div>
 </nav>
+<!----Book show card--->
 
-<!-- post -->
-
-<section class="container d-flex flex-column align-items-center mt-5 pt-3">
-  {{#each books}}
+<section class="container mt-5 pt-3 d-flex justify-content-center">
     <div class="card mb-3" style="max-width: 700px;">
       <div class="row no-gutters">
         <div class="col-md-4">
           <!--Dont put src="../static/uploads/imgname" ;Reason:staic is already public so dont mention it in path,eg:look css linking in layouts-->
-          <img src="../uploads/{{img}}" class="card-img" alt="check" />
+          <img src="../uploads/{{book.img}}" class="card-img" alt="check" />
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <a href="books/{{_id}}" class="card-link"><h4 class="card-title">{{title}}</h4></a>
+            <h4 class="card-title">{{book.title}}</h4>
             
-            <h6 class="card-title">{{author}}</h6>
-            <p class="card-text">{{language}},{{genre}}<p/>
-            <p class="card-text">{{desc}}</p>
+            <h6 class="card-title">{{book.author}}</h6>
+            <p class="card-text">{{book.language}},{{genre}}<p/>
+            <p class="card-text">{{book.desc}}</p>
             
-            <a href={{linkToPurchase}} class="card-link">Purchase</a>
+            <a href={{book.linkToPurchase}} class="card-link">Purchase</a>
           </div>
         </div>
       </div>
     </div>
-  {{else}}
-    <p>No books to display</p>
-  {{/each}}
 
 </section>
