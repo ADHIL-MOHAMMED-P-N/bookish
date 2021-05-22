@@ -54,6 +54,7 @@ app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth_route"));
 app.use("/books", require("./routes/books_route"));
 app.use("/search", require("./routes/search"));
+app.use("/singlebook", require("./routes/singlebook"));
 
 const port = process.env.PORT || 4000;
 app.listen(
