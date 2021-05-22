@@ -32,7 +32,6 @@ router.get("/add", verifyAuth, (req, res) => {
 
 //post to books
 router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
-    console.log(req.file);
     try {
         req.body.user = req.user.id;
         req.body.img = req.file.filename;
@@ -43,16 +42,5 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
         res.render("error");
     }
 });
-
-/* router.get("/:id", verifyAuth, async(req, res) => {
-    try {
-        const book = await Book.findById(req.params.id).lean();
-        res.render("showbook", {
-            book: book,
-        });
-    } catch (error) {
-        res.render("error");
-    }
-}); */
 
 module.exports = router;

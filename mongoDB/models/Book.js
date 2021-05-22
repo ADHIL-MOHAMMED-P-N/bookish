@@ -1,5 +1,14 @@
 const mongoose = require("mongoose");
 
+const reviewSchema = new mongoose.Schema({
+    comment: {
+        type: String,
+    },
+    like: {
+        type: Number,
+    },
+});
+
 const BookSchema = new mongoose.Schema({
     ibnNumber: {
         type: String,
@@ -41,6 +50,8 @@ const BookSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
+    review: [reviewSchema],
+
     createdAt: {
         type: Date,
         default: Date.now(),
