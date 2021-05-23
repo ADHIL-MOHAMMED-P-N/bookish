@@ -33,7 +33,7 @@ router.get("/add", verifyAuth, (req, res) => {
 //post to books
 router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
     try {
-        req.body.user = req.user.id;
+        req.body.user = req.user.id; //req.body give the form data ,and we add on user to it ie req.body.user
         req.body.img = req.file.filename;
         await Book.create(req.body);
         res.redirect("/home");

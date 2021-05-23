@@ -1,0 +1,26 @@
+{{> navbar}}
+<h1 class="mt-5">{{name}}</h1>
+{{#if books}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Tittle</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each books}}
+            <tr>
+                <td><img src="../uploads/{{img}}" alt={{title}} class="darshboard__img"></td>
+                <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
+                <td>{{createdAt}}</td>
+                <td></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<p>You have no posts yet,add some</p>
+{{/if}}

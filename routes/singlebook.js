@@ -9,6 +9,7 @@ router.get("/:id", verifyAuth, async(req, res) => {
         res.render("showbook", {
             book: book,
             review: book.review,
+            name: req.user.displayName,
         });
     } catch (error) {
         res.render("error");

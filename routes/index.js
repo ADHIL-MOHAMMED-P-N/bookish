@@ -15,7 +15,7 @@ router.get("/home", verifyAuth, async(req, res) => {
     try {
         const books = await Book.find({}).lean();
         res.render("home", {
-            name: req.user.firstName,
+            name: req.user.displayName,
             books: books,
         });
     } catch (error) {
@@ -23,5 +23,17 @@ router.get("/home", verifyAuth, async(req, res) => {
     }
 });
 //dashboard
+router.get("/dashboard", verifyAuth, async(req, res) => {
+    try {
+        const userBooks = await Book.find({ user: req.user.id }).lean();
+        res.render("dashboard", {
+            name: req.user.displayName,
+            books: userBooks,
+        });
+    } catch (error) {
+        console.error(error);
+        res.render("error/500");
+    }
+});
 
 module.exports = router;

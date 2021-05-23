@@ -44,7 +44,16 @@ const BookSchema = new mongoose.Schema({
     },
     genre: {
         type: String,
-        /* required: true, */
+        enum: [
+            "Fiction",
+            "Non-Fiction",
+            "Sci-Fi",
+            "Biography",
+            "Science",
+            "Politics",
+            "Travelog",
+            "Poem",
+        ],
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
