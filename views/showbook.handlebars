@@ -30,6 +30,18 @@
   <button class="btn btn-primary" type="submit" value="submit">Post</button> 
 </form>
 {{#each review}}
-<p>{{this.comment}}</p>
+<div class="d-flex justify-content-between">
+  <div>
+    <p>{{this.comment}}</p>
+  </div>
+  <div>
+<!--
+  <form action="/singlebook/{{book._id}}/{{this._id}}" method="POST">
+    <button class="btn"><i class="fas fa-thumbs-up"></i></button>
+  </form>
+-->
+
+  </div>
+</div>
 {{/each}}
 </section>
