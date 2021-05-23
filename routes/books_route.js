@@ -27,7 +27,9 @@ const upload = multer({
 
 //to get form
 router.get("/add", verifyAuth, (req, res) => {
-    res.render("form");
+    res.render("form", {
+        name: req.user.displayName,
+    });
 });
 
 //post to books
@@ -40,6 +42,24 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
     } catch (err) {
         console.error(err);
         res.render("error");
+    }
+});
+//edit book
+router.get("/edit/:id", verifyAuth, async(req, res) => {
+    const book = await Book.findOne({
+        _id: req.params.id,
+    }).lean();
+
+    if (!book) {
+        return res.render("error");
+    }
+    if (book.user != req.user.id) {
+        res.redirect("/home");
+    } else {
+        res.render("editbook", {
+            name: req.user.displayName,
+            book,
+        });
     }
 });
 

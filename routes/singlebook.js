@@ -13,6 +13,7 @@ router.get("/:id", verifyAuth, async(req, res) => {
         });
     } catch (error) {
         res.render("error");
+        console.log(error);
     }
 });
 

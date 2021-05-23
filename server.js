@@ -29,7 +29,12 @@ app.use(express.static(path.join(__dirname, "static")));
 /* app.use(express.static(path.join(__dirname, "static", "uploads"))); */
 
 //handlebars helpers
-const { formatDate, truncate, editButton } = require("./helpers/handlebars");
+const {
+    formatDate,
+    truncate,
+    editButton,
+    select,
+} = require("./helpers/handlebars");
 
 //Handlebars
 app.engine(
@@ -40,6 +45,7 @@ app.engine(
             formatDate,
             truncate,
             editButton,
+            select,
         },
     })
 );

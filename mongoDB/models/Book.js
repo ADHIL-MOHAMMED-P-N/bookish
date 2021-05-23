@@ -53,6 +53,7 @@ const BookSchema = new mongoose.Schema({
             "Politics",
             "Travelog",
             "Poem",
+            "Romantic",
         ],
     },
     user: {
