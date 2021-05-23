@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "static")));
 /* app.use(express.static(path.join(__dirname, "static", "uploads"))); */
 
 //handlebars helpers
-const { formatDate } = require("./helpers/handlebars");
+const { formatDate, truncate, editButton } = require("./helpers/handlebars");
 
 //Handlebars
 app.engine(
@@ -38,6 +38,8 @@ app.engine(
         defaultLayout: "index",
         helpers: {
             formatDate,
+            truncate,
+            editButton,
         },
     })
 );
@@ -58,6 +60,13 @@ app.use(
 //passport-middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+//global variables
+
+app.use(function(req, res, next) {
+    res.locals.user = req.user || null; //access user within handlebar template(not bookUser but logged in user)
+    next();
+});
 
 //Using the routes(routes at bottom)
 app.use("/", require("./routes/index"));

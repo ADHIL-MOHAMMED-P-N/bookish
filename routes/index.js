@@ -13,7 +13,10 @@ router.get("/", verifyGuest, (req, res) => {
 //Home route
 router.get("/home", verifyAuth, async(req, res) => {
     try {
-        const books = await Book.find({}).lean();
+        const books = await Book.find({})
+            .populate("user")
+            .sort({ createdAt: "desc" })
+            .lean();
         res.render("home", {
             name: req.user.displayName,
             books: books,
