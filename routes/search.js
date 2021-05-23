@@ -13,6 +13,7 @@ router.get("/", verifyAuth, async(req, res) => {
         }).lean();
         res.render("home", {
             books: books,
+            name: req.user.displayName,
         });
     } catch (error) {
         res.render("error");

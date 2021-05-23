@@ -1,7 +1,8 @@
-{{> navbar}}
-<h1 class="mt-5">{{name}}</h1>
+{{>navbar}}
 {{#if books}}
-    <table class="striped">
+
+<section class="p-5">
+    <table class="table table-striped mt-5">
         <thead>
             <tr>
                 <th>Image</th>
@@ -15,12 +16,14 @@
             <tr>
                 <td><img src="../uploads/{{img}}" alt={{title}} class="darshboard__img"></td>
                 <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
-                <td>{{createdAt}}</td>
+                <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
                 <td></td>
             </tr>
             {{/each}}
         </tbody>
     </table>
+</section>
+
 {{else}}
 <p>You have no posts yet,add some</p>
 {{/if}}

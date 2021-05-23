@@ -28,10 +28,20 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "static")));
 /* app.use(express.static(path.join(__dirname, "static", "uploads"))); */
 
+//handlebars helpers
+const { formatDate } = require("./helpers/handlebars");
+
 //Handlebars
-app.engine("handlebars", handlebars({ defaultLayout: "index" }));
+app.engine(
+    "handlebars",
+    handlebars({
+        defaultLayout: "index",
+        helpers: {
+            formatDate,
+        },
+    })
+);
 app.set("view engine", "handlebars");
-/* app.use(express.static("views/images")); */ //img not loading
 
 //session middle ware ----!!always put above passport middleware
 app.use(
