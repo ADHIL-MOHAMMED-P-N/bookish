@@ -22,6 +22,10 @@
                      <div class="rating-value">2.5</div>
                   <input type="submit">
             </form>
+            <a href="/user/{{book.user._id}}">
+  {{book.user.displayName}}
+</a>
+<img src="{{book.user.image}}" alt="" />
           </div>
         </div>
       </div>
@@ -38,9 +42,13 @@
 {{#each review}}
 <div class="d-flex justify-content-between">
   <div>
-    <p>{{this.comment}}</p>
-    <p>{{this.user.displayName}}</p>
     <img src="{{this.user.image}}" alt="">
+    <a href="/user/{{this.user._id}}">
+  {{user.displayName}}
+</a>
+<p>
+  {{this.comment}}
+</p>
     <hr>
     
   </div>
