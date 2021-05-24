@@ -7,7 +7,23 @@ const reviewSchema = new mongoose.Schema({
     like: {
         type: Number,
     },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    }
+
 });
+
+const ratingSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+    },
+    ratingValue: {
+        type: Number,
+
+    }
+})
 
 const BookSchema = new mongoose.Schema({
     ibnNumber: {
@@ -61,6 +77,8 @@ const BookSchema = new mongoose.Schema({
         ref: "User",
     },
     review: [reviewSchema],
+
+    rating: [ratingSchema],
 
     createdAt: {
         type: Date,

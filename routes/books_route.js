@@ -4,6 +4,7 @@ const { verifyAuth } = require("../middleware/auth_middleware");
 const multer = require("multer");
 const Book = require("../mongoDB/models/Book");
 const path = require("path");
+const { request } = require("express");
 
 //multer img upload
 const storage = multer.diskStorage({
@@ -37,6 +38,7 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
     try {
         req.body.user = req.user.id; //req.body give the form data ,and we add on user to it ie req.body.user
         req.body.img = req.file.filename;
+        req.body.rating = [{ user: req.user.id, ratingValue: 2.5 }]
         await Book.create(req.body);
         res.redirect("/home");
     } catch (err) {
