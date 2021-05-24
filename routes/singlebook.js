@@ -16,6 +16,7 @@ router.get("/:id", verifyAuth, async(req, res) => {
         console.log(error);
     }
 });
+//review
 
 router.post("/:id", verifyAuth, function(req, res) {
     var newReview = { comment: req.body.review, like: 0 };

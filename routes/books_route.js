@@ -45,7 +45,7 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
     }
 });
 //edit book
-router.get("/edit/:id", verifyAuth, async(req, res) => {
+/* router.get("/edit/:id", verifyAuth, async(req, res) => {
     const book = await Book.findOne({
         _id: req.params.id,
     }).lean();
@@ -58,9 +58,49 @@ router.get("/edit/:id", verifyAuth, async(req, res) => {
     } else {
         res.render("editbook", {
             name: req.user.displayName,
-            book,
+            book: book,
         });
     }
-});
+}); */
+//edit function PUT request Update book
+/* router.put("/:id", verifyAuth, async(req, res) => {
+    let book = await Book.findById(req.params.id).lean();
+    if (!book) {
+        return res.render("error");
+    }
 
+    if (book.user != req.user.id) {
+        res.redirect("/home");
+    } else {
+        book = await Book.findOneAndUpdate({ _id: req.params.id }, req.body, {
+            new: true,
+            runValidators: true,
+        });
+
+        res.redirect("/dashboard");
+    }
+});
+ */
+//edit function PUT request Update book
+/* router.post("/:id", upload.single("img"), verifyAuth, function(req, res) {
+    Book.findOneAndUpdate({ _id: req.params.id }, {
+            ibnNumber: req.body.ibnNumber,
+            title: req.body.title,
+            author: req.body.author,
+            language: req.body.language,
+            desc: req.body.desc,
+            img: req.body.img,
+            linkToPurchase: req.body.linkToPurchase,
+            genre: req.body.genre,
+        },
+        function(error, success) {
+            if (error) {
+                res.render("error");
+                console.log(error);
+            } else {
+                res.redirect("/dashboard");
+            }
+        }
+    );
+}); */
 module.exports = router;
