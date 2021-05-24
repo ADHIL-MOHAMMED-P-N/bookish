@@ -1,0 +1,50 @@
+{{>navbar}}
+<div class="container pt-5 mt-5">
+    <div class="row">
+  <div class="col-8">{{#if books}}
+<section>
+  <table class="table table-striped mt-5">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Tittle</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each books}}
+        <tr>
+          <td><img
+              src="../uploads/{{img}}"
+              alt={{title}}
+              class="darshboard__img"
+            /></td>
+          <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
+          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+       
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</section>
+{{else}}
+<p>No books to show</p>
+{{/if}}
+</div>
+  <div class="col-4 ">
+<div class="card border-0" style="width: 18rem;">
+  <img class="card-img-top img-fluid img-thumbnail rounded-circle " src="{{singlebook.user.image}}" alt="Card image cap">
+  <div class="card-body text-center">
+    <h5 class="card-title ">{{singlebook.user.displayName}}</h5>
+    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+    <a href="#" class="btn btn-primary ">Go somewhere</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+

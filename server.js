@@ -93,6 +93,7 @@ app.use("/auth", require("./routes/auth_route"));
 app.use("/books", require("./routes/books_route"));
 app.use("/search", require("./routes/search"));
 app.use("/singlebook", require("./routes/singlebook"));
+app.use("/user", require("./routes/user"));
 
 const port = process.env.PORT || 4000;
 app.listen(

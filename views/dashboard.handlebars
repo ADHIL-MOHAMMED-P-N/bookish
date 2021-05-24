@@ -1,41 +1,6 @@
 {{>navbar}}
 {{#if books}}
-
-<section class="p-5">
-    <table class="table table-striped mt-5">
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Tittle</th>
-                <th>Date</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each books}}
-            <tr>
-                <td><img src="../uploads/{{img}}" alt={{title}} class="darshboard__img"></td>
-                <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
-                <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
-                <td>
-                    <form action="/books/{{_id}}" method="POST" id="delete">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                    </form>
-                    
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</section>
-
-
-
-
-
+{{>table}}
 {{else}}
 <p>You have no posts yet,add some</p>
 {{/if}}
