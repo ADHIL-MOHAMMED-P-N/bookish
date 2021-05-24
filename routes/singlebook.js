@@ -5,7 +5,7 @@ const Book = require("../mongoDB/models/Book");
 
 router.get("/:id", verifyAuth, async(req, res) => {
     try {
-        const book = await Book.findById(req.params.id).populate("user").lean();
+        const book = await Book.findById(req.params.id).populate("user").populate('review.user').lean();
         const ratingArray = book.rating;
         //filtering loggedin users rating only
         const userRatingArray = ratingArray.filter(rating => rating.user == req.user.id);
@@ -33,7 +33,8 @@ router.get("/:id", verifyAuth, async(req, res) => {
 //review comments
 
 router.post("/:id", verifyAuth, function(req, res) {
-    var newReview = { comment: req.body.review, like: 0 };
+    req.body.user = req.user.id;
+    var newReview = { comment: req.body.review, like: 0, user: req.user.id };
     Book.findOneAndUpdate({ _id: req.params.id }, { $push: { review: newReview } },
         function(error, success) {
             if (error) {
@@ -56,8 +57,6 @@ router.post("/rating/:id", verifyAuth, function(req, res) {
                     console.log(error)
                 } else {
                     res.redirect('back')
-                    console.log(newRating)
-
                 }
             }
         )

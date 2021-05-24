@@ -39,15 +39,12 @@
 <div class="d-flex justify-content-between">
   <div>
     <p>{{this.comment}}</p>
-  </div>
-  <div>
-<!--
-  <form action="/singlebook/{{book._id}}/{{this._id}}" method="POST">
-    <button class="btn"><i class="fas fa-thumbs-up"></i></button>
-  </form>
--->
-
+    <p>{{this.user.displayName}}</p>
+    <img src="{{this.user.image}}" alt="">
+    <hr>
+    
   </div>
 </div>
+
 {{/each}}
 </section>
