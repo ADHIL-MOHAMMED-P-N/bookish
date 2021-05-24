@@ -5,7 +5,7 @@ const Book = require("../mongoDB/models/Book");
 
 router.get("/:id", verifyAuth, async(req, res) => {
     try {
-        const book = await Book.findById(req.params.id).lean();
+        const book = await Book.findById(req.params.id).populate("user").lean();
         res.render("showbook", {
             book: book,
             review: book.review,

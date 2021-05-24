@@ -44,6 +44,17 @@ router.post("/", upload.single("img"), verifyAuth, async(req, res) => {
         res.render("error");
     }
 });
+//Delete book
+router.delete("/:id", verifyAuth, async(req, res) => {
+    try {
+        await Book.remove({ _id: req.params.id });
+        res.redirect("/dashboard");
+    } catch (error) {
+        console.log(error);
+        res.render("error");
+    }
+});
+
 //edit book
 /* router.get("/edit/:id", verifyAuth, async(req, res) => {
     const book = await Book.findOne({
