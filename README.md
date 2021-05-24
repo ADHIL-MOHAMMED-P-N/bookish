@@ -1,16 +1,40 @@
-# Bookish
+![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
 
+# BOOKISH
 "If we encounter a man of rare intellect, we should ask him what books he reads"
 
 – Ralph Waldo Emerson
 
-Hey, Are you looking for your choice of books? or Help someone find a book of their taste?
-Whatever it is,here we take you to the right place!!
+Hey, Are you looking for your choice of books? or Help someone find a book of their taste? Whatever it is,here we take you to the right place!!
 
 Bookish helps users to add book, review, rate, upvote reviews and also help you to grab it.
 
----
-## Requirements
+## Team members
+1. Adhil MOhammed P N [https://github.com/ADHIL-MOHAMMED-P-N]
+2. Drishya K [https://github.com/drishyadamodaran]
+3. Deepna M [https://github.com/DEEPNA-M]
+## Team Id
+BFH/recQb8Uhom9evuMgX/2021
+## Link to product walkthrough
+[link to video]
+## How it Works ?
+1. Explaining the working of project
+2. Embed video of project demo
+## Libraries used
+        connect-mongo: ^4.4.1,
+        dotenv: ^9.0.2,
+        express: ^4.17.1,
+        express-handlebars: ^5.3.2,
+        express-session: ^1.17.1,
+        method-override: ^3.0.0,
+        moment: ^2.29.1,
+        mongoose: ^5.12.9,
+        morgan: ^1.10.0,
+        multer: ^1.4.2,
+        node-fetch: ^2.6.1,
+        passport: ^0.4.1",
+        passport-google-oauth20: ^2.0.0
+## How to configure
 
 For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
 
@@ -42,17 +66,13 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
 
     $ npm install npm -g
 
-###
-
-
 ## Install
 
     $ git clone https://github.com/ADHIL-MOHAMMED-P-N/bookish
     $ cd bookish
     $ npm install
 
-
-
-## Running the project
+###
+## How to Run
 
     $ npm start
