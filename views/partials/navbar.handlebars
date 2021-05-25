@@ -22,12 +22,6 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/auth/logout">
-            Logout
-          </a>
-          <!-- start with / in href other wise current route get added in front of targeted route which will result in error-->
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/books/add">
             <i class="fas fa-plus-circle"></i>
             Add
@@ -38,6 +32,12 @@
             <i class="fas fa-user-circle"></i>
             {{name}}
           </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">
+            Logout
+          </a>
+          <!-- start with / in href other wise current route get added in front of targeted route which will result in error-->
         </li>
       </ul>
       <form class="d-flex" action="/search" method="GET">
