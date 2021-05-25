@@ -1,17 +1,18 @@
 
 {{>navbar}}
 
-<section class="container">
-  
-<form action="/books" method="POST" enctype="multipart/form-data" class="mt-5 p-3">
-<h3 class="text-center">Add Book</h3>
+<section class="container my-5">
+  <br>
+  <div class="card my-5">
+<form action="/books" method="POST" enctype="multipart/form-data" class="p-5">
+<h3>Add Book</h3>
   <div class="form-group">
     <label for="IBN Number" name="ibnNumber">IBN Number</label>
     <input
       type="text"
       class="form-control"
       id="ibnNumber"
-      placeholder="12553627223"
+     
     />
   </div>
   <div class="form-group">
@@ -23,12 +24,12 @@
     <input type="text" class="form-control" id="author" name="author" />
   </div>
   <div class="form-group">
-    <label for="language">language</label>
+    <label for="language">Language</label>
     <input type="text" class="form-control" id="language" name="language" />
   </div>
   <div class="form-group">
-    <label for="Image">Image</label>
-    <input type="file" class="form-control-file" id="image" name="img" />
+    <label for="Image">Image</label> 
+    <input type="file" class="form-control-file mx-3" id="image" name="img" />
   </div>
   <div class="form-group">
     <label for="buy">Buy</label>
@@ -64,7 +65,10 @@
       name="desc"
     ></textarea>
   </div>
-  <input type="submit" class="btn" value="save" />
+  <br>
+  <input type="submit" class="btn btn-success" value="save" />
   <a href="/home" class="btn btn-danger">Cancel</a>
 </form>
+  </div>
+
 </section>
