@@ -47,6 +47,7 @@ const {
     truncate,
     editButton,
     select,
+    stars,
 } = require("./helpers/handlebars");
 
 //Handlebars
@@ -59,6 +60,7 @@ app.engine(
             truncate,
             editButton,
             select,
+            stars,
         },
     })
 );

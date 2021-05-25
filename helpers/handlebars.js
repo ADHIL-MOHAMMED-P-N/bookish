@@ -37,4 +37,22 @@ module.exports = {
                 ' selected="selected"$&'
             );
     },
+    stars: function(rating) {
+
+        ratingsum = 0;
+        const icon = "<i class=\"fas fa-star\"></i>"
+        const halficon = "<i class=\"fas fa-star-half-alt\"></i>"
+        for (let j = 0; j < rating.length; j++) {
+            ratingsum = ratingsum + rating[j].ratingValue
+        }
+        const avgrating = (ratingsum / rating.length).toFixed(3);
+        let iconString = "";
+        for (let i = 0; i < Math.floor(avgrating); i++) {
+            iconString = iconString.concat(icon)
+        }
+        if (avgrating - Math.floor(avgrating) >= 0.5) {
+            iconString = iconString.concat(halficon)
+        }
+        return iconString;
+    }
 };

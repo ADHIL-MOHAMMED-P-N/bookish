@@ -54,3 +54,12 @@
     width: 30px;
     border-radius: 25px;
 }
+
+.rating-star {
+    margin-left: 25px;
+    color: var(--secondary);
+}
+
+.rating-star-text {
+    color: black;
+}
