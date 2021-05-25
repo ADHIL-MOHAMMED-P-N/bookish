@@ -9,23 +9,31 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h4 class="card-title">{{book.title}}</h4>
-            <h6 class="card-title">{{book.author}}</h6>
-            <h5>Book Rating : {{avgRating}}</h5>
+            <h4 class="card-title single-book-title">{{book.title}}</h4>
+            <h6 class="card-title"><span class="by">by</span>{{book.author}}</h6>
+            <h5 class="d-inline-block">Rating : {{avgRating}}</h5>
+            <span class="rating-star">{{{stars book.rating}}}</span>
             <p class="card-text">{{book.language}},{{book.genre}}<p/>
             <p class="card-text">{{book.desc}}</p>
-            <a href={{book.linkToPurchase}} class="card-link">Purchase</a>
-            <h6>Your current rating : {{rating.ratingValue}}</h6>
+            <a href={{book.linkToPurchase}} class="btn btn-warning buy">
+                      <i class="fas fa-shopping-cart"></i></a>
+            <br><br>
+            <h6 class="d-inline-block">Your current rating : {{rating.ratingValue}}</h6>
             <form action="/singlebook/rating/{{book._id}}" method="POST">
               <label for="vol">Rate</label>
-                  <input type="range" id="rating" value = "2.5" name="rating" min="0" max="5" step="0.1" class="rating-input">
-                     <div class="rating-value">2.5</div>
-                  <input type="submit">
+                  <input type="range" id="rating" value = {{rating.ratingValue}} name="rating" min="0" max="5" step="0.1" class="rating-input">
+                     <span class="rating-value">{{rating.ratingValue}}</span>
+                  <button type="submit" class="mx-4 btn btn-success" ><i class="fas fa-check"></i></button>
             </form>
-            <a href="/user/{{book.user._id}}">
-  {{book.user.displayName}}
-</a>
-<img src="{{book.user.image}}" alt="" />
+
+<div class="user-badge">
+  <a href="/user/{{book.user._id}}">
+    <img src={{book.user.image}} class="user-badge-img" />
+  </a>
+  <a href="/user/{{book.user._id}}" class="user-badge-name">
+    {{book.user.displayName}}
+  </a>
+</div>
           </div>
         </div>
       </div>
@@ -33,26 +41,24 @@
 
 </section>
 <!--review section-->
-<section class="container" style="max-width:600px;">
+<section class="container" style="max-width:710px;">
 <form action="/singlebook/{{book._id}}" method="POST" >
     <label for="review">Review</label>
-    <input class="form-control" id="review" name="review" type="text"/>
-  <button class="btn btn-primary" type="submit" value="submit">Post</button> 
+    <input class="form-control my-2" id="review" name="review" type="text"/>
+  <button class="btn btn-info" type="submit" value="submit">Post</button> 
 </form>
+<hr>
 {{#each review}}
-<div class="d-flex justify-content-between">
-  <div>
-    <img src="{{this.user.image}}" alt="">
-    <a href="/user/{{this.user._id}}">
-  {{user.displayName}}
-</a>
-<p>
-  {{this.comment}}
-</p>
-    <hr>
-    
-  </div>
+<div class="user-badge">
+  <a href="/user/{{this.user._id}}">
+    <img src={{this.user.image}} class="user-badge-img" />
+  </a>
+  <a href="/user/{{this.user._id}}" class="user-badge-name">
+    {{this.user.displayName}}
+  </a>
 </div>
+<p>{{this.comment}}</p>
+<hr>
 
 {{/each}}
 </section>

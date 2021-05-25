@@ -70,3 +70,13 @@ a {
     align-self: center;
     margin-top: 40px;
 }
+
+
+/* ////////////////////////////Show single book !!! later change to new css file */
+
+
+/* Show book */
+
+.single-book-title {
+    color: var(--primary);
+}

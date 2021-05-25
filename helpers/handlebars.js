@@ -45,7 +45,7 @@ module.exports = {
         for (let j = 0; j < rating.length; j++) {
             ratingsum = ratingsum + rating[j].ratingValue
         }
-        const avgrating = (ratingsum / rating.length).toFixed(3);
+        const avgrating = (ratingsum / rating.length).toFixed(1);
         let iconString = "";
         for (let i = 0; i < Math.floor(avgrating); i++) {
             iconString = iconString.concat(icon)

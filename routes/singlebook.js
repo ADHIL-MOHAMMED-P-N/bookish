@@ -15,7 +15,7 @@ router.get("/:id", verifyAuth, async(req, res) => {
         for (let i = 0; i < ratingArray.length; i++) {
             ratingSum = ratingSum + ratingArray[i].ratingValue
         }
-        const avgRating = (ratingSum / ratingArray.length).toFixed(3)
+        const avgRating = (ratingSum / ratingArray.length).toFixed(1)
 
         res.render("showbook", {
             book: book,
