@@ -5,3 +5,56 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary: #314e52;
+    --secondary: #f2a154;
+    --white: #f7f6e7;
+    --grey: #e7e6e1;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* bootstrap redefine */
+
+.btn {
+    border: none;
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.btn-info {
+    background-color: var(--secondary)!important;
+}
+
+.btn-info:hover {
+    background-color: #fd8c22 !important;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-link {
+    color: var(--primary);
+}
+
+.card-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}

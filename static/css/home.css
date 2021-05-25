@@ -1,1 +1,56 @@
 /*home page styling*/
+
+
+/* navbar */
+
+.search-in {
+    width: 45%;
+    margin-right: 20px;
+}
+
+
+/* card */
+
+.home-card {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 0.5rem;
+}
+
+.by {
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.buy {
+    margin: 0px 0px;
+}
+
+.user-badge {
+    background-color: #f8f8f8;
+    display: inline-block;
+    padding-right: 15px;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.user-badge:hover {
+    background-color: #e9e7e7;
+}
+
+.user-badge-name {
+    color: rgba(0, 0, 0, 0.473);
+}
+
+.user-badge-name:hover {
+    color: rgb(0, 0, 0);
+}
+
+.user-badge-img {
+    width: 30px;
+    border-radius: 25px;
+}

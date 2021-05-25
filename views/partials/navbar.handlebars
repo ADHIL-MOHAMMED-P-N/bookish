@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top px-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home">Bookish</a>
+    <a class="navbar-brand" href="/home">
+      Bookish
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -15,41 +17,58 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home">
+            Home
+          </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="/auth/logout"
-          >Logout</a><!-- start with / in href other wise current route get added in front of targeted route which will result in error-->
+          <a class="nav-link" href="/auth/logout">
+            Logout
+          </a>
+          <!-- start with / in href other wise current route get added in front of targeted route which will result in error-->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/books/add">Add</a>
+          <a class="nav-link" href="/books/add">
+            <i class="fas fa-plus-circle"></i>
+            Add
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/dashboard">{{name}}</a>
+          <a class="nav-link" href="/dashboard">
+            <i class="fas fa-user-circle"></i>
+            {{name}}
+          </a>
         </li>
-
       </ul>
       <form class="d-flex" action="/search" method="GET">
         <input
-          class="form-control me-2"
+          class="form-control me-2 search-box"
           type="search"
           placeholder="Search"
           aria-label="Search"
           name="search"
         />
         <select
-          class="form-select form-select-sm"
+          class="form-select form-select-sm search-in"
           aria-label=".form-select-sm example"
           name="category"
         >
-          <option selected>Search in</option>
-          <option value="title">Title</option>
-          <option value="author">Author</option>
-          <option value="genre">Genre</option>
+          <option selected>
+            Search in
+          </option>
+          <option value="title">
+            Title
+          </option>
+          <option value="author">
+            Author
+          </option>
+          <option value="genre">
+            Genre
+          </option>
         </select>
-        <button class="btn btn-success" type="submit">Search</button>
+        <button class="btn btn-success" type="submit">
+          Search
+        </button>
       </form>
     </div>
   </div>
