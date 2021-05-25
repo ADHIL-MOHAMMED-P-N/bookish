@@ -36,23 +36,23 @@ const BookSchema = new mongoose.Schema({
     },
     author: {
         type: String,
-        /*  required: true, */
+        required: true,
     },
     language: {
         type: String,
-        /*  required: true, */
+        required: true,
     },
     desc: {
         type: String,
-        /*  required: true, */
+        required: true,
     },
     img: {
         type: String,
-        /*  required: true, */
+        required: true,
     },
     linkToPurchase: {
         type: String,
-        /* required: true, */
+        required: true,
     },
     year: {
         type: String,
