@@ -1,31 +1,44 @@
-<section class="p-5">
-  <table class="table table-striped mt-5">
+<section class="container p-5">
+  <table class="table table-striped mt-5 dashboard-table table-hover">
     <thead>
       <tr>
-        <th>Image</th>
-        <th>Tittle</th>
-        <th>Date</th>
+        <th>
+          Image
+        </th>
+        <th>
+          Tittle
+        </th>
+        <th>
+          Date
+        </th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       {{#each books}}
         <tr>
-          <td><img
+          <td>
+            <img
               src="../uploads/{{img}}"
               alt={{title}}
               class="darshboard__img"
-            /></td>
-          <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-          <td>
+            />
+          </td>
+          <td valign="middle">
+            <a href="/singlebook/{{_id}}" class="cell-title">
+              {{title}}
+            </a>
+          </td>
+          <td valign="middle">
+            {{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}
+          </td>
+          <td valign="middle">
             <form action="/books/{{_id}}" method="POST" id="delete">
               <input type="hidden" name="_method" value="DELETE" />
               <button type="submit" class="btn btn-danger">
                 <i class="fas fa-trash"></i>
               </button>
             </form>
-
           </td>
         </tr>
       {{/each}}

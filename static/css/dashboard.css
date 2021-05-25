@@ -1,3 +1,17 @@
 .darshboard__img {
     width: 50px;
 }
+
+.dashboard-table {
+    font-size: 18px;
+}
+
+.cell-title {
+    vertical-align: top;
+    color: black;
+}
+
+.cell-title:hover {
+    color: black;
+    text-decoration: underline;
+}
