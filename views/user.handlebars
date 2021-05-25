@@ -3,7 +3,7 @@
     <div class="row">
   <div class="col-8">{{#if books}}
 <section>
-  <table class="table table-striped mt-5">
+  <table class="table table-striped table-hover">
     <thead>
       <tr>
         <th>Image</th>
@@ -20,8 +20,8 @@
               alt={{title}}
               class="darshboard__img"
             /></td>
-          <td><a href="/singlebook/{{_id}}">{{title}}</a></td>
-          <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
+          <td valign="middle" ><a href="/singlebook/{{_id}}" class="cell-title">{{title}}</a></td>
+          <td valign="middle">{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
        
         </tr>
       {{/each}}
@@ -34,12 +34,11 @@
 </div>
   <div class="col-4 ">
 <div class="card border-0" style="width: 18rem;">
-  <img class="card-img-top img-fluid img-thumbnail rounded-circle " src="{{singlebook.user.image}}" alt="Card image cap">
+  <img class="card-img-top img-fluid img-thumbnail rounded-circle user-img" src="{{singlebook.user.image}}" alt="Card image cap">
   <div class="card-body text-center">
     <h5 class="card-title ">{{singlebook.user.displayName}}</h5>
-    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text ">Maybe this is why we read, and why in moments of darkness we return to books: to find words for what we already know.</p>
 
-    <a href="#" class="btn btn-primary ">Go somewhere</a>
   </div>
 </div>
 </div>

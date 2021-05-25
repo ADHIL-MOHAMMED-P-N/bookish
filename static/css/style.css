@@ -58,3 +58,15 @@ a {
     color: var(--primary);
     text-decoration: underline;
 }
+
+
+/* ////////////////////////////Show user !!! later change to new css file */
+
+
+/* Show user */
+
+.user-img {
+    width: 200px;
+    align-self: center;
+    margin-top: 40px;
+}

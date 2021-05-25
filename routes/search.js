@@ -10,7 +10,7 @@ router.get("/", verifyAuth, async(req, res) => {
         /* console.log(category); */
         const books = await Book.find({
             [category]: req.query.search, //"search" is the name of the input field
-        }).lean();
+        }).populate('user').lean();
         res.render("home", {
             books: books,
             name: req.user.displayName,
