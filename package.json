@@ -4,8 +4,8 @@
     "description": "Website where user can add book,review,rate,upvote reviews",
     "main": "server.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=production node server.js",
-        "dev": "cross-env NODE_ENV=development nodemon server.js"
+        "start": "node server.js",
+        "dev": "nodemon server.js"
     },
     "author": "Adhil",
     "license": "ISC",
