@@ -11,12 +11,12 @@ Bookish helps users to add book, review, rate, upvote reviews and also help you 
 
 ### Features
  - [x] Login and Logout System
- - [x] Add,Edit & Delete books
+ - [x] Add & Delete books
  - [x] Rate,Review & Buy the book
  - [x] Books added are listed in dashboard
  - [x] User Management
  - [x] Search by categories
- - [ ] Responsiveness
+ - [ ] Responsiveness(still working)
   
 
 ## Team members
@@ -36,7 +36,7 @@ BFH/recQb8Uhom9evuMgX/2021
  * Click Add for adding books and its review
  * Select a book and can review,rate,or buy
  * Books added by you are listed in your dashboard
- * Edit & Delete option available
+ * Delete option available
  * Search option is available
  * Able to search by three different categories
  
