@@ -32,14 +32,14 @@ BFH/recQb8Uhom9evuMgX/2021
 
 ## How it Works ?
  * Go to [Bookish](http://bookish123.herokuapp.com)
- * Login with Google account & logout system
+ * Login with Google account
  * Click Add for adding books and its review
  * Select a book and can review,rate,or buy
  * Books added by you are listed in your dashboard
  * Delete option available
  * Search option is available
  * Able to search by three different categories
- 
+ * Login made easier with google
 
 ## Libraries used
         connect-mongo: ^4.4.1,
