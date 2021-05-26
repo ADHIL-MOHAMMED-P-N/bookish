@@ -16,7 +16,7 @@ Bookish helps users to add book, review, rate, upvote reviews and also help you 
  - [x] Books added are listed in dashboard
  - [x] User Management
  - [x] Search by categories
- - [ ] Responsiveness(still working)
+ - [ ] Responsiveness(still working on it)
   
 
 ## Team members
