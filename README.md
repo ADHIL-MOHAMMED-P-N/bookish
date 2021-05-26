@@ -9,7 +9,15 @@ Hey, Are you looking for your choice of books? or Help someone find a book of th
 
 Bookish helps users to add book, review, rate, upvote reviews and also help you to grab it.
 
-Go to [Bookish](http://bookish123.herokuapp.com)
+### Features
+ - [x] Login and Logout System
+ - [x] Add,Edit & Delete books
+ - [x] Rate,Review & Buy the book
+ - [x] Books added are listed in dashboard
+ - [x] User Management
+ - [x] Search by categories
+ - [ ] Responsiveness
+  
 
 ## Team members
 1. [Adhil Mohammed P N](https://github.com/ADHIL-MOHAMMED-P-N)
@@ -23,17 +31,15 @@ BFH/recQb8Uhom9evuMgX/2021
 [Click here](https://www.loom.com/share/42eb4c57a5b54e8488610607954d7d92)
 
 ## How it Works ?
-
- - [x] Login with Google account & logout system
- - [x] Click Add for adding books and its review
- - [x] Select a book and can review,rate,or buy
- - [x] Books added by you are listed in your dashboard
- - [x] Edit & Delete option available
- - [x] Search option is available
- - [x] Able to search by three different categories
- - [ ] Responsiveness
+ * Go to [Bookish](http://bookish123.herokuapp.com)
+ * Login with Google account & logout system
+ * Click Add for adding books and its review
+ * Select a book and can review,rate,or buy
+ * Books added by you are listed in your dashboard
+ * Edit & Delete option available
+ * Search option is available
+ * Able to search by three different categories
  
-
 
 ## Libraries used
         connect-mongo: ^4.4.1,
