@@ -16,10 +16,17 @@ Bookish helps users to add book, review, rate, upvote reviews and also help you 
 ## Team Id
 BFH/recQb8Uhom9evuMgX/2021
 ## Link to product walkthrough
-[link to video]
+https://www.loom.com/share/42eb4c57a5b54e8488610607954d7d92
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+ Login with Google account
+ Click Add for adding books and its review
+ Select a book and can review,rate,or buy
+ Books added by you are listed in your dashboard
+ You can also delete 
+ Search option is available
+ Able to search by three different categories
+ 
+ 
 ## Libraries used
         connect-mongo: ^4.4.1,
         dotenv: ^9.0.2,
