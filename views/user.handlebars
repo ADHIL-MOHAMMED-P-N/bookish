@@ -32,11 +32,12 @@
 <p>No books to show</p>
 {{/if}}
 </div>
+<!--Displaying user-->
   <div class="col-md-4 ">
 <div class="card border-0" style="width: 18rem;">
-  <img class="card-img-top img-fluid img-thumbnail rounded-circle user-img" src="{{singlebook.user.image}}" alt="Card image cap">
+  <img class="card-img-top img-fluid img-thumbnail rounded-circle user-img" src={{singleUser.image}}>
   <div class="card-body text-center">
-    <h5 class="card-title ">{{singlebook.user.displayName}}</h5>
+    <h5 class="card-title ">{{singleUser.displayName}}</h5>
     <p class="card-text ">Maybe this is why we read, and why in moments of darkness we return to books: to find words for what we already know.</p>
 
   </div>
