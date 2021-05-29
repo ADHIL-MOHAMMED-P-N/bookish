@@ -22,7 +22,7 @@ router.get("/:id", verifyAuth, async(req, res) => {
             name: req.user.displayName, //for navbar partials
             singleUser,
         });
-        console.log(singleUser)
+        
     } catch (error) {
         console.log(error);
         res.render("error");
