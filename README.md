@@ -16,7 +16,7 @@ Bookish helps users to add book, review, rate, upvote reviews and also help you 
  - [x] Books added are listed in dashboard
  - [x] User Management
  - [x] Search by categories
- - [ ] Responsiveness(still working on it)
+ 
   
 
 ## Team members
@@ -27,8 +27,6 @@ Bookish helps users to add book, review, rate, upvote reviews and also help you 
 ## Team Id
 BFH/recQb8Uhom9evuMgX/2021
 
-## Link to product walkthrough
-[Click here](https://www.loom.com/share/42eb4c57a5b54e8488610607954d7d92)
 
 ## How it Works ?
  * Go to [Bookish](http://bookish123.herokuapp.com)
